@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="About Technova - A community-maintained directory with 2,200+ technology resources across 50 categories.">
+  <meta name="theme-color" content="#0A0E1A">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="About — Technova">
+  <meta property="og:description" content="Learn about Technova - the free, open-source technology directory with 2,200+ resources.">
+  <meta name="twitter:card" content="summary">
+  
+  <!-- Security: Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+  
+  <title>About — Technova</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .category-group {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .category-group h4 {
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .category-group ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .category-group li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      padding: 0.25rem 0;
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 1.5rem 0;
+      list-style: none;
+      padding: 0;
+    }
+    .feature-list li {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+    }
+    .feature-list strong {
+      color: var(--text);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .feature-list span {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .cta-section {
+      background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .cta-section h3 {
+      margin-bottom: 0.5rem;
+    }
+    .cta-section p {
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .btn-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+  <!-- Skip Link -->
+  <a class="sr-only" href="#main">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand-row">
+        <div class="logo-wrap" aria-hidden="true">
+          <svg class="logo-svg" width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#A78BFA"/>
+                <stop offset="50%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#06B6D4"/>
+              </linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <g stroke="url(#logo-gradient)" stroke-width="1.5" opacity="0.5" stroke-linecap="round">
+              <line x1="24" y1="6" x2="24" y2="12"/><line x1="24" y1="36" x2="24" y2="42"/>
+              <line x1="6" y1="24" x2="12" y2="24"/><line x1="36" y1="24" x2="42" y2="24"/>
+            </g>
+            <g class="orbit" stroke="rgba(167,139,250,0.3)" stroke-width="1" fill="none">
+              <ellipse cx="24" cy="24" rx="16" ry="6" transform="rotate(-20 24 24)"/>
+            </g>
+            <circle cx="24" cy="24" r="8" fill="url(#logo-gradient)" filter="url(#glow)"/>
+            <circle cx="24" cy="24" r="4" fill="#fff" opacity="0.9"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="logo"><span class="brand-accent">technova</span></h1>
+          <p class="tagline">Your map to the tech universe</p>
+        </div>
+      </div>
+      
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      
+      <nav class="site-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link active" href="about.html">About</a>
+        <a class="nav-link" href="contribute.html">Contribute</a>
+        <a class="nav-link" href="community.html">Community</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="container">
+    <article class="content">
+      <h2>About Technova</h2>
+      <p>Technova is a lightweight, community-maintained directory for quickly discovering technology projects, tools, frameworks, and developer resources. We prioritize clarity, speed, and simple organization.</p>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number">2,200+</div>
+          <div class="stat-label">Resources</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">50</div>
+          <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Languages</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Free & Open</div>
+        </div>
+      </div>
+
+      <h3>Why Technova?</h3>
+      <ul class="feature-list">
+        <li>
+          <strong>Fast Discovery</strong>
+          <span>Scan names and descriptions quickly without information overload</span>
+        </li>
+        <li>
+          <strong>Comprehensive</strong>
+          <span>From programming languages to payment APIs, all in one place</span>
+        </li>
+        <li>
+          <strong>Always Current</strong>
+          <span>Regularly updated with the latest tools and technologies</span>
+        </li>
+        <li>
+          <strong>Community-Driven</strong>
+          <span>Anyone can suggest additions — no gatekeeping</span>
+        </li>
+        <li>
+          <strong>Accessible</strong>
+          <span>Keyboard navigation, screen reader support, high contrast</span>
+        </li>
+        <li>
+          <strong>Privacy-Focused</strong>
+          <span>No tracking, no analytics, no cookies</span>
+        </li>
+      </ul>
+
+      <h3>Categories</h3>
+      <p>Resources are organized into 50 categories covering the complete developer workflow:</p>
+      
+      <div class="category-grid">
+        <div class="category-group">
+          <h4>Languages & Frameworks</h4>
+          <ul>
+            <li>Programming Language (543)</li>
+            <li>Frontend (6)</li>
+            <li>Backend (18)</li>
+            <li>Library (108)</li>
+            <li>Runtime (10)</li>
+          </ul>
+        </div>
+        <div class="category-group">
+          <h4>Data & AI</h4>
+          <ul>
+            <li>AI/ML (66)</li>
+            <li>Data Science (13)</li>
+            <li>Data Engineering (13)</li>
+          </ul>
+        </div>
+        <div class="category-group">
+          <h4>Data & Storage</h4>
+          <ul>
+            <li>Database (47)</li>
+            <li>ORM (20)</li>
+            <li>Storage (19)</li>
+            <li>Search (12)</li>
+            <li>Message Queue (18)</li>
+          </ul>
+        </div>
+        <div class="category-group">
+          <h4>Backend & Infrastructure</h4>
+          <ul>
+            <li>API (17)</li>
+            <li>Authentication (26)</li>
+            <li>Hosting (25)</li>
+            <li>Serverless (16)</li>
+            <li>CDN (13)</li>
+            <li>Cloud (9)</li>
+            <li>Container (14)</li>
+          </ul>
+        </div>
+        <div class="category-group">
+          <h4>Developer Tools</h4>
+          <ul>
+            <li>IDE/Editor (34)</li>
+            <li>DevOps (33)</li>
+            <li>Build Tool (28)</li>
+            <li>Package Manager (23)</li>
+            <li>Version Control (15)</li>
+            <li>Testing (30)</li>
+            <li>Debugging (9)</li>
+            <li>CLI (13)</li>
+          </ul>
+        </div>
+        <div class="category-group">
+          <h4>Security & Quality</h4>
+          <ul>
+            <li>Security (14)</li>
+            <li>Code Quality (13)</li>
+            <li>Monitoring (10)</li>
+            <li>Analytics (18)</li>
+            <li>Feature Flags (13)</li>
+          </ul>
+        </div>
+        <div class="category-group">
+          <h4>Business & Services</h4>
+          <ul>
+            <li>Email (15)</li>
+            <li>Payment (14)</li>
+            <li>Tool (718)</li>
+            <li>Startup (41)</li>
+            <li>Business (1)</li>
+          </ul>
+        </div>
+        <div class="category-group">
+          <h4>Design & Collaboration</h4>
+          <ul>
+            <li>Design (18)</li>
+            <li>Documentation (18)</li>
+            <li>Collaboration (17)</li>
+            <li>CMS (17)</li>
+            <li>Low-Code (8)</li>
+          </ul>
+        </div>
+        <div class="category-group">
+          <h4>Platform & Hardware</h4>
+          <ul>
+            <li>Mobile (12)</li>
+            <li>Operating System (11)</li>
+            <li>Hardware (6)</li>
+            <li>Game Engine (2)</li>
+            <li>IoT (2)</li>
+            <li>VR/AR (2)</li>
+            <li>Blockchain (8)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-section">
+        <h3>Help Us Grow</h3>
+        <p>Know a tool or technology that's missing? We'd love to add it!</p>
+        <div class="btn-group">
+          <a class="btn" href="contribute.html">Contribute a Resource</a>
+          <a class="btn btn-secondary" href="index.html">Browse Directory</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Technova — Community-maintained. Open source and free forever.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/nav.js" defer></script>
+</body>
+</html>

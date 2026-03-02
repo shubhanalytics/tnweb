@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Contribute to Technova - Submit new technology resources for the directory.">
+  <meta name="theme-color" content="#0A0E1A">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contribute — Technova">
+  <meta property="og:description" content="Submit new technology tools and resources to the Technova directory.">
+  <meta name="twitter:card" content="summary">
+  
+  <!-- Security: Content Security Policy -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https:; img-src 'self' data: https:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+  
+  <title>Contribute — Technova</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Skip Link -->
+  <a class="sr-only" href="#main">Skip to main content</a>
+  
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand-row">
+        <div class="logo-wrap" aria-hidden="true">
+          <svg class="logo-svg" width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="logo-gradient" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#A78BFA"/>
+                <stop offset="50%" stop-color="#8B5CF6"/>
+                <stop offset="100%" stop-color="#06B6D4"/>
+              </linearGradient>
+              <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="2" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+            </defs>
+            <g stroke="url(#logo-gradient)" stroke-width="1.5" opacity="0.5" stroke-linecap="round">
+              <line x1="24" y1="6" x2="24" y2="12"/><line x1="24" y1="36" x2="24" y2="42"/>
+              <line x1="6" y1="24" x2="12" y2="24"/><line x1="36" y1="24" x2="42" y2="24"/>
+            </g>
+            <g class="orbit" stroke="rgba(167,139,250,0.3)" stroke-width="1" fill="none">
+              <ellipse cx="24" cy="24" rx="16" ry="6" transform="rotate(-20 24 24)"/>
+            </g>
+            <circle cx="24" cy="24" r="8" fill="url(#logo-gradient)" filter="url(#glow)"/>
+            <circle cx="24" cy="24" r="4" fill="#fff" opacity="0.9"/>
+          </svg>
+        </div>
+        <div>
+          <h1 class="logo"><span class="brand-accent">technova</span></h1>
+          <p class="tagline">Your map to the tech universe</p>
+        </div>
+      </div>
+      
+      <button class="nav-toggle" id="navToggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+      
+      <nav class="site-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link active" href="contribute.html">Contribute</a>
+        <a class="nav-link" href="community.html">Community</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main" class="container">
+    <article class="content">
+      <h2>Contribute a Site</h2>
+      <p>Thanks for contributing! Please provide accurate details and a working URL. Submissions are reviewed before being added to the directory.</p>
+
+      <form id="contribForm" action="https://formspree.io/f/xreadjal" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New Technova Submission">
+        <input type="hidden" name="_format" value="json">
+        
+        <label for="siteName">Site Name <span style="color: var(--primary);">*</span></label>
+        <input type="text" id="siteName" name="siteName" required placeholder="e.g., TensorFlow">
+        
+        <label for="siteUrl">Site URL <span style="color: var(--primary);">*</span></label>
+        <input type="url" id="siteUrl" name="siteUrl" required placeholder="https://example.com">
+        
+        <label for="category">Category <span style="color: var(--primary);">*</span></label>
+        <select id="category" name="category" required>
+          <option value="">Select a category</option>
+          <optgroup label="Languages & Frameworks">
+            <option value="Programming Language">Programming Language</option>
+            <option value="Framework">Framework</option>
+            <option value="Library">Library</option>
+          </optgroup>
+          <optgroup label="Data & Storage">
+            <option value="Database">Database</option>
+            <option value="ORM">ORM</option>
+            <option value="Storage">Storage</option>
+            <option value="Search">Search</option>
+          </optgroup>
+          <optgroup label="Backend & Infrastructure">
+            <option value="API">API</option>
+            <option value="Authentication">Authentication</option>
+            <option value="Hosting">Hosting</option>
+            <option value="Serverless">Serverless</option>
+            <option value="CDN">CDN</option>
+            <option value="Cloud">Cloud</option>
+            <option value="Container">Container</option>
+            <option value="Message Queue">Message Queue</option>
+          </optgroup>
+          <optgroup label="Developer Tools">
+            <option value="DevOps">DevOps</option>
+            <option value="Build Tool">Build Tool</option>
+            <option value="Package Manager">Package Manager</option>
+            <option value="Version Control">Version Control</option>
+            <option value="Testing">Testing</option>
+            <option value="IDE/Editor">IDE/Editor</option>
+            <option value="Runtime">Runtime</option>
+            <option value="Tool">Tool</option>
+          </optgroup>
+          <optgroup label="Security & Monitoring">
+            <option value="Security">Security</option>
+            <option value="Monitoring">Monitoring</option>
+            <option value="Analytics">Analytics</option>
+            <option value="Feature Flags">Feature Flags</option>
+          </optgroup>
+          <optgroup label="Business & Services">
+            <option value="Email">Email</option>
+            <option value="Payment">Payment</option>
+          </optgroup>
+          <optgroup label="AI & Emerging Tech">
+            <option value="AI/ML">AI/ML</option>
+            <option value="Blockchain">Blockchain</option>
+            <option value="Mobile">Mobile</option>
+          </optgroup>
+          <optgroup label="Design & Collaboration">
+            <option value="Design">Design</option>
+            <option value="Documentation">Documentation</option>
+            <option value="Collaboration">Collaboration</option>
+            <option value="CMS">CMS</option>
+            <option value="Low-Code">Low-Code</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="Technology">Technology</option>
+            <option value="Startup">Startup</option>
+          </optgroup>
+        </select>
+        
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="3" placeholder="Brief description of what this is..."></textarea>
+        
+        <label for="owner">Owner / Organization</label>
+        <input type="text" id="owner" name="owner" placeholder="e.g., Google, Microsoft">
+        
+        <label for="email">Your Email (optional)</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes" rows="3" placeholder="Any additional information..."></textarea>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn" id="submitBtn">Submit</button>
+          <button type="reset" class="btn btn-secondary">Clear</button>
+        </div>
+      </form>
+      
+      <div id="result" aria-live="polite"></div>
+
+      <div class="submit-helpers">
+        <p><strong>Prefer email?</strong> Send details to <a href="mailto:shubhank.katarey@outlook.com?subject=Technova%20Submission">shubhank.katarey@outlook.com</a></p>
+        <p><strong>Social:</strong> Reach out on X <a href="https://x.com/shubhanalytics" target="_blank" rel="noopener">@shubhanalytics</a></p>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Technova — Community-maintained. Open source and free forever.</p>
+    </div>
+  </footer>
+
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/contribute.js" defer></script>
+</body>
+</html>
